@@ -12,6 +12,7 @@ alias xlll='while :; do tailf ~/.kodi/temp/kodi.log; done'
 # Custom aliases
 alias kairos='curl http://wttr.in/thessaloniki'
 alias dumax='du -h --max-depth=1 2> /dev/null | sort -n -r | head -n20'
+alais rmempty='find . -type d -empty -delete'
 
 # Upgrade
 alias upgrade='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get clean'
