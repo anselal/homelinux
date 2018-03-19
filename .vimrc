@@ -1,3 +1,6 @@
+" Enable syntax
+syntax on
+
 " Show line numbers
 set number
 
