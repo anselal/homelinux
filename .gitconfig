@@ -4,6 +4,7 @@
 [alias]
         it = !git init && git commit -m \":hatching_chick: root\" --allow-empty
         grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %$
+        rm-deleted = !git rm $(git ls-files --deleted)
 [color]
         ui = true
 [log]
