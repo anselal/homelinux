@@ -1,5 +1,4 @@
 import os
-import sys
 
 validExts = (".mp4", ".mkv", ".srt")
 
