@@ -25,7 +25,7 @@ def fix_episode_names(basePath='.'):
 
                 correctedEpisodeSeason = 's' + episode + 'e' + season
 
-                print filename, correctedEpisodeSeason
+                print(filename, correctedEpisodeSeason)
                 tokens[1] = correctedEpisodeSeason
                 newFilename = '.'.join(tokens)
                 print filename, newFilename
