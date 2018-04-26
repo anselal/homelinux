@@ -13,7 +13,7 @@ def fix_episode_names(basePath='.'):
                 episode_season = tokens[1]
                 episode = ''
                 season = ''
-                print(filename, episode)
+                print(filename, episode_season)
                 episode = episode_season[:-2]
                 season = episode_season[-2:]
 
