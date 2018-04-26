@@ -28,7 +28,7 @@ def fix_episode_names(basePath='.'):
                 print(filename, correctedEpisodeSeason)
                 tokens[1] = correctedEpisodeSeason
                 newFilename = '.'.join(tokens)
-                print filename, newFilename
+                print(filename, newFilename)
                 oldFilePath = os.path.join(rootDir, filename)
                 newFilePath = os.path.join(rootDir, newFilename)
                 print("[INFO] renaming: {} to: {}".format(oldFilePath, newFilePath))
