@@ -14,14 +14,8 @@ def fix_episode_names(basePath='.'):
                 episode = ''
                 season = ''
                 print(filename, episode)
-                if(len(episode_season)) == 3:
-                   episode = episode_season[0]
-                   season =  episode_season[1:]
-                elif(len(episode_season)) == 4:
-                   episode = episode_season[0:2]
-                   season =  episode_season[2:]
-                else:
-                   sys.exit(1)
+                episode = episode_season[:-2]
+                season =  episode_season[-2:]
 
                 correctedEpisodeSeason = 's' + episode + 'e' + season
 
