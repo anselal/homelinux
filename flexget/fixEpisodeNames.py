@@ -2,6 +2,7 @@ import os
 
 validExts = (".mp4", ".mkv", ".srt")
 
+
 def fix_episode_names(basePath='.'):
     for(rootDir, dirNames, filenames) in os.walk(basePath):
         for filename in filenames:
@@ -14,7 +15,7 @@ def fix_episode_names(basePath='.'):
                 season = ''
                 print(filename, episode)
                 episode = episode_season[:-2]
-                season =  episode_season[-2:]
+                season = episode_season[-2:]
 
                 correctedEpisodeSeason = 's' + episode + 'e' + season
 
@@ -24,7 +25,8 @@ def fix_episode_names(basePath='.'):
                 print(filename, newFilename)
                 oldFilePath = os.path.join(rootDir, filename)
                 newFilePath = os.path.join(rootDir, newFilename)
-                print("[INFO] renaming: {} to: {}".format(oldFilePath, newFilePath))
+                print("[INFO] renaming: {} to: {}".format(
+                    oldFilePath, newFilePath))
                 os.rename(oldFilePath, newFilePath)
 
 
