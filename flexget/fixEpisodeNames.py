@@ -13,7 +13,7 @@ def fix_episode_names(basePath='.'):
                 episode_season = tokens[1]
                 episode = ''
                 season = ''
-                print filename, episode
+                print(filename, episode)
                 if(len(episode_season)) == 3:
                    episode = episode_season[0]
                    season =  episode_season[1:]
