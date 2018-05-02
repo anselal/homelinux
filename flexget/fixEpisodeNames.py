@@ -10,6 +10,8 @@ def fix_episode_names(basePath='.'):
             print(rootDir, filename)
             if ext.endswith(validExts):
                 tokens = filename.split('.')
+                # TODO Search `tokens` for a number
+                # Some series have longer names
                 episode_season = tokens[1]
                 episode = ''
                 season = ''
