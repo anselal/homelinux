@@ -11,7 +11,7 @@ alias xlll='while :; do tailf ~/.kodi/temp/kodi.log; done'
 
 # Custom aliases
 alias kairos='curl http://wttr.in/thessaloniki'
-alias dumax='du -h --max-depth=1 2> /dev/null | sort -n -r | head -n20'
+alias dumax='du -h --max-depth=1 2> /dev/null | sort -h -r | head -n20'
 alias rmempty='find . -type d -empty -delete'
 
 # Upgrade
