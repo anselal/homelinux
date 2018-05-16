@@ -90,6 +90,8 @@ set ignorecase " case insensitive searching
 set smartcase " case-sensitive if expresson contains a capital letter
 set incsearch " set incremental search, like modern browsers
 
+set showmatch " show matching braces
+
 " Enable syntax, make code look pretty
 syntax on
 let python_highlight_all=1
