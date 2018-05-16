@@ -59,7 +59,7 @@ nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
-nnoremap td :closetab<CR>
+nnoremap td :tabclose<CR>
 
 " specify different areas of the screen where the splits should occur by default
 set splitbelow
