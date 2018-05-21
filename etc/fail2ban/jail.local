@@ -1,0 +1,9 @@
+[block-all-dem-noobs]
+enabled = true
+port = http,https
+filter = block-all-dem-noobs
+logpath = /var/log/apache*/*access.log
+maxretry = 5
+findtime = 10
+bantime = 7200
+action = iptables[name=HTTP, port=http, protocol=tcp]
