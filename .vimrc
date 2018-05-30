@@ -17,10 +17,12 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'vim-scripts/indentpython.vim'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'vim-airline/vim-airline' " powerline like status bar
 Plugin 'kien/ctrlp.vim' " fuzzy find files
 Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
 Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'vim-syntastic/syntastic'
+Plugin 'itchyny/lightline.vim' " light powerline clone
 
 " colorschemes
 " Manually installed in ~/.vim/colors to get rid of .git overhead
@@ -164,3 +166,24 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v(env|env3|venv)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+  \ }
+"let g:ctrlp_custom_ignore = {
+"  \ 'file': '\v(\.cpp|\.h|\.hh|\.cxx)@<!$'
+"  \ }
+
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'bufnum', 'mode', 'paste', ],
+      \             [ 'gitbranch', ],
+      \             [ 'readonly', 'filename', 'modified', ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head',
+      \ },
+      \ }
+
