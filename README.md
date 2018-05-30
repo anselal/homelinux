@@ -31,7 +31,7 @@ fi
 - **Vim statusline:** append to ~/.vimrc or /etc/vim/vimrc:
 
 ```sh
-set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+set rtp+=/usr/local/lib/python3.6/dist-packages/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2
