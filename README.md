@@ -43,7 +43,7 @@ set t_Co=256
 - **Tmux statusline:** append to ~/.tmux.conf:
 
 ```sh
-source /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf
+source /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf
 set-option -g default-terminal "screen-256color"
 ```
 
