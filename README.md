@@ -1,6 +1,16 @@
 # homelinux
 Custom linux config files
 
+# bash
+
+- Append the following lines to your .bashrc file
+
+```sh
+export TERM='screen-256color'
+test -s ~/.bash_aliases && source ~/.bash_aliases || true
+test -s ~/.bash_prompt && source ~/.bash_prompt || true
+```
+
 # powerline
 
 taken from https://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin
@@ -46,4 +56,3 @@ set t_Co=256
 source /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf
 set-option -g default-terminal "screen-256color"
 ```
-
