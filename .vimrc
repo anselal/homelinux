@@ -104,6 +104,10 @@ set number
 " Encoding
 set encoding=utf-8
 
+" Enable mouse controls
+set mousef
+set mouse=a
+
 " PEP8 Indentation
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
