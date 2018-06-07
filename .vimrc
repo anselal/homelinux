@@ -193,4 +193,10 @@ let g:lightline = {
       \   'lineinfo': ' %3l:%-2v',
       \ },
       \ }
+let g:lightline.separator = {
+  \   'left': '', 'right': ''
+  \}
+let g:lightline.subseparator = {
+	\   'left': '', 'right': ''
+  \}
 
