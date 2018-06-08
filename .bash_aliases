@@ -35,8 +35,8 @@ alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true 
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
 
 # Networking
-alias openports='sudo netstat -tulp' # optionally pass -n and --numeric-ports
-alias openconnections='sudo netstat -tupn --numeric-ports'
+alias openports='sudo netstat -tulp' # optionally pass -n
+alias openconnections='sudo netstat -tupn'
 
 function rpi_info() {
   echo ""
