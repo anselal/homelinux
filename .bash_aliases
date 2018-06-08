@@ -34,6 +34,10 @@ alias rpi_getcodec='for codec in H264 MPG2 WVC1 MPG4 MJPG WMV9 ; do echo -e "$co
 alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
 
+# Networking
+alias openports='sudo netstat -tulp' # optionally pass -n and --numeric-ports
+alias openconnections='sudo netstat -tupn --numeric-ports'
+
 function rpi_info() {
   echo ""
   echo "=======";
