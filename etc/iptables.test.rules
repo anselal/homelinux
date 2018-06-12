@@ -2,6 +2,7 @@
 :ssh_access - [0:0]
 :http_access - [0:0]
 :https_access - [0:0]
+:vnc_access - [0:0]
 :db_access - [0:0]
 
 # Allows all loopback (lo0) traffic and drop all traffic to 127/8 that doesn't use lo0
@@ -22,6 +23,9 @@
 # Allows SSH connections
 # The --dport number is the same as in /etc/ssh/sshd_config
 -A INPUT -p tcp -m state --state NEW --dport 22 -j ssh_access
+
+# Allows VNC connection from anywhere
+-A INPUT -p tcp --dport 5900 -j vnc_access
 
 # Allow DB connections only from localhost
 
@@ -50,6 +54,9 @@
 # Chain ssh_access
 -A ssh_access -j ACCEPT
 #-A ssh_access -s <SOME_IP_OR_HOSTNAME> -j ACCEPT
+
+# Chain vnc_access
+-A vnc_access -j ACCEPT
 
 # Chain db_access
 
