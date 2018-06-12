@@ -38,6 +38,10 @@ exec --no-startup-id /usr/bin/feh --bg-scale ~/.config/wallpapers/marc-kleen-544
 for_window [class=".*"] border pixel 0
 hide_edge_borders both
 
+# Set keyboard layout
+exec setxkbmap -layout us,gr
+exec setxkbmap -option 'grp:alt_shift_toggle'
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
