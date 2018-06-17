@@ -43,34 +43,46 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+;----------;
+; LOCATION ;
+;----------;
 
-; modules left: bspwm
-modules-left = i3
-modules-center = 
-modules-right = wireless-network pub-ip filesystem alsa xkeyboard memory cpu temperature date powermenu
-; modules: xbacklight pulseaudio battery
+;bottom = true
+;wm-restack = i3
+;override-redirect = true
+
+;-------;
+; FONTS ;
+;-------;
+
+font-0 = HackNerdFont:size=12;3
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=12;3"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=12;3"
+font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
+
+;---------------;
+; MISCELLANEOUS ;
+;---------------;
 
 tray-position = right
 tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+modules-left = i3
+modules-center = 
+modules-right = network wireless-network pub-ip filesystem alsa xkeyboard memory cpu temperature date powermenu
+; modules: xbacklight pulseaudio battery
+
+;---------;
+; MODULES ;
+;---------;
 
 [module/xwindow]
 type = internal/xwindow
@@ -97,7 +109,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-mount-1 = /home
+;mount-1 = /home
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
@@ -214,16 +226,10 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
 
-[module/wired-network]
-type = internal/network
-interface = eth0
-
 [module/wireless-network]
 type = internal/network
 interface = wlan0
 interval = 3.0
-
-
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
@@ -244,7 +250,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = 
+interface = eth0
 interval = 3.0
 
 format-connected-underline = #55aa55
