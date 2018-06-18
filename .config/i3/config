@@ -189,3 +189,4 @@ bar {
 # ASSIGNMENTS #
 #-------------#
 assign [class="Firefox"] $ws2
+assign [class="Sublime"] $ws3
