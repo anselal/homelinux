@@ -184,3 +184,8 @@ bar {
         position top
         status_command i3status
 }
+
+#-------------#
+# ASSIGNMENTS #
+#-------------#
+assign [class="Firefox"] $ws2
