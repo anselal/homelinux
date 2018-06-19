@@ -5,6 +5,7 @@ Custom linux config files
 
 - Append the following lines to your .bashrc file
 
+For TERM use `screen-256color` or `xterm-256color` whatever works for you
 ```sh
 export TERM='screen-256color'
 test -s ~/.bash_aliases && source ~/.bash_aliases || true
