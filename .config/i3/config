@@ -210,6 +210,7 @@ bindsym XF86AudioPrev exec playerctl previous
 #-------------#
 # ASSIGNMENTS #
 #-------------#
+# you can find out the class name of a window using xprop
 
 assign [class="Firefox"] $ws2
 assign [class="Sublime"] $ws3
@@ -218,6 +219,6 @@ assign [class="Skype"] $ws10
 #---------------#
 # FLOATING APPS #
 #---------------#
-# you can find out the class name of a windows using xprop
+# you can find out the class name of a window using xprop
 
 for_window [class="XCalc"] floating enable
