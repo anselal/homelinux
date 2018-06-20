@@ -1,11 +1,10 @@
 general {
   colors = true
-  interval = 1
   color_good = "#36E592"
   color_degraded = "#CE9726"
   color_bad = "#CE4B4F"
   color_separator = "#B3BEFF"
-  interval = 5
+  interval = 1
 }
 
 order += "ethernet eth0"
