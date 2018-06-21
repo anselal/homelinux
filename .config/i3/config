@@ -162,7 +162,9 @@ bindsym $sup+Shift+r restart
 bindsym $sup+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
+set $mode_resize  resize
+bindsym $sup+r mode "mode_resize"
+mode "mode_resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
@@ -185,8 +187,6 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $sup+r mode "default"
 }
-
-bindsym $sup+r mode "resize"
 
 ##
 # system
