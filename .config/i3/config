@@ -49,6 +49,9 @@ exec setxkbmap -option 'grp:alt_shift_toggle'
 # start a terminal
 bindsym $sup+Return exec $TERMINAL
 
+# list open windows to switch to
+bindsym $alt+Tab exec rofi -show window
+
 # kill focused window
 bindsym $sup+Shift+q kill
 
