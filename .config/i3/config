@@ -13,6 +13,7 @@
 set $alt Mod1
 set $sup Mod4
 set $psst --no-startup-id
+set $TERMINAL lilyterm -s
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -46,7 +47,7 @@ exec setxkbmap -layout us,gr
 exec setxkbmap -option 'grp:alt_shift_toggle'
 
 # start a terminal
-bindsym $sup+Return exec i3-sensible-terminal
+bindsym $sup+Return exec $TERMINAL
 
 # kill focused window
 bindsym $sup+Shift+q kill
