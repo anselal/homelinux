@@ -76,6 +76,20 @@ nnoremap <C-H> <C-W><C-H> " Ctrl-m move to the split to the left
 " faster redrawing
 set ttyfast
 
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+    "Remember the positions in files with some git-specific exceptions"
+    autocmd BufReadPost *
+      \ if line("'\"") > 0 && line("'\"") <= line("$")
+      \           && expand("%") !~ "COMMIT_EDITMSG"
+      \           && expand("%") !~ "ADD_EDIT.patch"
+      \           && expand("%") !~ "addp-hunk-edit.diff"
+      \           && expand("%") !~ "git-rebase-todo" |
+      \   exe "normal g`\"" |
+      \ endif
+endif " has("autocmd")
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
