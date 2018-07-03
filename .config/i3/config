@@ -83,6 +83,11 @@ bindsym $sup+Shift+q kill
 #bindsym $sup+d exec dmenu_run
 bindsym $sup+d exec rofi -show run
 
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+# bindsym $sup+d exec --no-startup-id i3-dmenu-desktop
+
 # launch categorized menu
 bindsym $sup+Shift+z exec morc_menu
 
@@ -95,11 +100,6 @@ bindsym $sup+t exec xfce4-terminal
 #---------#
 # WINDOWS #
 #---------#
-
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $sup+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $sup+j focus left
