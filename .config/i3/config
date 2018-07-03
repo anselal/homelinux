@@ -9,11 +9,19 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+#----------#
+# MOD KEYS #
+#----------#
+
 # Mod1 = Alt, Mod4 = 'strange wiggly flag' key
 set $alt Mod1
 set $sup Mod4
 #set $psst --no-startup-id
 set $TERMINAL lilyterm -s
+
+#------#
+# FONT #
+#------#
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -33,18 +41,34 @@ font pango:HackNerdFont 12
 # Use Mouse+$sup to drag floating windows to their wanted position
 floating_modifier $sup
 
+#------#
+# GAPS #
+#------#
+
 # Set gaps
 gaps inner 10
 gaps outer 10
+
+#-----------#
+# WALLPAPER #
+#-----------#
 
 # Set wallpaper
 exec_always --no-startup-id /usr/bin/feh --bg-scale ~/.config/wallpapers/marc-kleen-544354-unsplash.jpg
 for_window [class=".*"] border pixel 0
 hide_edge_borders both
 
+#-----------------#
+# KEYBOARD LAYOUT #
+#-----------------#
+
 # Set keyboard layout
 exec --no-startup-id setxkbmap -layout us,gr
 exec --no-startup-id setxkbmap -option 'grp:alt_shift_toggle'
+
+#-------------------#
+# APPLICATION BINDS #
+#-------------------#
 
 # start a terminal
 bindsym $sup+Return exec $TERMINAL
@@ -64,6 +88,13 @@ bindsym $sup+Shift+z exec morc_menu
 
 # launch xfce4-taskmanager
 bindsym Ctrl+Shift+Escape exec xfce4-taskmanager
+
+# launch sticky floating terminal
+bindsym $sup+t exec xfce4-terminal
+
+#---------#
+# WINDOWS #
+#---------#
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -94,6 +125,15 @@ bindsym $sup+Shift+Down move down
 bindsym $sup+Shift+Up move up
 bindsym $sup+Shift+Right move right
 
+# change focus between tiling / floating windows
+bindsym $sup+space focus mode_toggle
+
+# focus the parent container
+bindsym $sup+a focus parent
+
+# focus the child container
+#bindsym $sup+d focus child
+
 # split in horizontal orientation
 bindsym $sup+h split h
 
@@ -111,14 +151,9 @@ bindsym $sup+e layout toggle split
 # toggle tiling / floating
 bindsym $sup+Shift+space floating toggle
 
-# change focus between tiling / floating windows
-bindsym $sup+space focus mode_toggle
-
-# focus the parent container
-bindsym $sup+a focus parent
-
-# focus the child container
-#bindsym $sup+d focus child
+#------------#
+# WORKSPACES #
+#------------#
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -157,12 +192,20 @@ bindsym $sup+Shift+8 move container to workspace $ws8
 bindsym $sup+Shift+9 move container to workspace $ws9
 bindsym $sup+Shift+0 move container to workspace $ws10
 
+#---------------#
+# RELOAD CONFIG #
+#---------------#
+
 # reload the configuration file
 bindsym $sup+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $sup+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $sup+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+#---------------#
+# RESIZE WINDOW #
+#---------------#
 
 # resize window (you can also use the mouse for that)
 set $mode_resize  resize
@@ -191,7 +234,10 @@ mode "$mode_resize" {
         bindsym $sup+r mode "default"
 }
 
-##
+#-------------#
+# MOVE WINDOW #
+#-------------#
+
 # move floating windows with keys
 set $mode_move 
 bindsym $alt+m mode "$mode_move" focus floating
@@ -213,9 +259,10 @@ mode "$mode_move" {
     bindsym Escape mode "default"
 }
 
-##
-# system
-##
+#-----------#
+# i3exit.sh #
+#-----------#
+
 set $mode_system    [L]OCK       LOG[O]UT       [S]USPEND       [R]EBOOT       [P]OWEROFF
 bindsym $alt+Delete mode "$mode_system"
 mode "$mode_system" {
@@ -229,6 +276,10 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
+#--------#
+# i3 BAR #
+#--------#
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -283,3 +334,9 @@ assign [class="Skype"] $ws10
 
 for_window [class="XCalc"] floating enable
 for_window [class="Xfce4-taskmanager"] floating enable
+for_window [class="Xfce4-terminal"] floating enable
+
+#-------------#
+# STICKY APPS #
+#-------------#
+for_window [class="Xfce4-terminal"] sticky enable border pixel 3
