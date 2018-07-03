@@ -12,7 +12,7 @@
 # Mod1 = Alt, Mod4 = 'strange wiggly flag' key
 set $alt Mod1
 set $sup Mod4
-set $psst --no-startup-id
+#set $psst --no-startup-id
 set $TERMINAL lilyterm -s
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -219,11 +219,11 @@ mode "$mode_move" {
 set $mode_system    [L]OCK       LOG[O]UT       [S]USPEND       [R]EBOOT       [P]OWEROFF
 bindsym $alt+Delete mode "$mode_system"
 mode "$mode_system" {
-    bindsym l exec $psst ~/.config/i3/scripts/i3exit.sh lock, mode "default"
-    bindsym o exec $psst ~/.config/i3/scripts/i3exit.sh logout, mode "default"
-    bindsym s exec $psst ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
-    bindsym r exec $psst ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
-    bindsym p exec $psst ~/.config/i3/scripts/i3exit.sh poweroff, mode "default"
+    bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
+    bindsym o exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
+    bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
+    bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
+    bindsym p exec --no-startup-id ~/.config/i3/scripts/i3exit.sh poweroff, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
