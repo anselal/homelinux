@@ -265,6 +265,7 @@ assign [class="Firefox"] $ws2
 assign [class="Sublime"] $ws3
 assign [class="Nautilus"] $ws4
 assign [class="Pcmanfm"] $ws4
+assign [class="Thunar"] $ws4
 assign [class="Remmina"] $ws5
 assign [class="Skype"] $ws10
 
