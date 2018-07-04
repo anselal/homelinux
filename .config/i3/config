@@ -151,6 +151,9 @@ bindsym $sup+e layout toggle split
 # toggle tiling / floating
 bindsym $sup+Shift+space floating toggle
 
+# focus follows mouse
+focus_follows_mouse no
+
 #------------#
 # WORKSPACES #
 #------------#
