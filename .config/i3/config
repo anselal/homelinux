@@ -324,6 +324,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # you can find out the class name of a window using xprop
 
 assign [class="Firefox"] $ws2
+assign [class="Chromium-browser"] $ws2
 assign [class="Sublime"] $ws3
 assign [class="Nautilus"] $ws4
 assign [class="Pcmanfm"] $ws4
