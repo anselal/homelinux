@@ -340,6 +340,7 @@ assign [class="Skype"] $ws10
 for_window [class="XCalc"] floating enable
 for_window [class="Xfce4-taskmanager"] floating enable
 for_window [class="Xfce4-terminal"] floating enable
+for_window [class="jetbrains-toolbox"] floating enable
 
 #-------------#
 # STICKY APPS #
