@@ -334,7 +334,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10; notify-send "brightness up"
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10; notify-send "brightness down" # decrease screen brightness
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec ~/.configi3/scripts/toggletouchpad.sh # toggle touchpad
+bindsym XF86TouchpadToggle exec ~/.config/i3/scripts/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
