@@ -97,6 +97,9 @@ bindsym Ctrl+Shift+Escape exec xfce4-taskmanager
 # launch sticky floating terminal
 bindsym $sup+t exec xfce4-terminal
 
+# show/hide st terminal from the scratchpad
+bindsym $sup+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
+
 #---------#
 # WINDOWS #
 #---------#
@@ -368,3 +371,13 @@ for_window [class="jetbrains-toolbox"] floating enable
 # STICKY APPS #
 #-------------#
 for_window [class="Xfce4-terminal"] sticky enable border pixel 3
+
+#-----------------------------#
+# DROPDOWN/SCRATCHPAD WINDOWS #
+#-----------------------------#
+
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] resize set 1000 600
+for_window [instance="dropdown"] move scratchpad
+for_window [instance="dropdown"] border pixel 5
+exec --no-startup-id st -n dropdown -e tmux
