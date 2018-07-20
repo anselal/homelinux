@@ -16,6 +16,7 @@
 # Set gaps
 gaps inner 10
 gaps outer 10
+smart_gaps on
 
 # Hide borders
 for_window [class=".*"] border pixel 0
@@ -383,6 +384,7 @@ bindsym XF86AudioPrev         exec playerctl previous
 
 assign [class="Firefox"] $ws2
 assign [class="Chromium-browser"] $ws2
+assign [class="qutebrowser"] $ws2
 assign [class="Sublime"] $ws3
 assign [class="Nautilus"] $ws4
 assign [class="Pcmanfm"] $ws4
