@@ -13,6 +13,9 @@ alias xlll='while :; do tailf ~/.kodi/temp/kodi.log; done'
 alias kairos='curl http://wttr.in/thessaloniki'
 alias dumax='du -h --max-depth=1 2> /dev/null | sort -h -r | head -n20'
 alias rmempty='find . -type d -empty -delete'
+alias octal="stat -c '%a %n'"
+# Usage octal * (for all files)
+#       octal hello.txt (for a specific file)
 
 # Upgrade
 alias upgrade='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get clean'
