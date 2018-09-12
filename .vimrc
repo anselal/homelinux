@@ -23,6 +23,7 @@ Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
 Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'vim-syntastic/syntastic'
 Plugin 'itchyny/lightline.vim' " light powerline clone
+Plugin 'junegunn/goyo.vim' " makes text more readable when writing
 
 " colorschemes
 " Manually installed in ~/.vim/colors to get rid of .git overhead
@@ -220,3 +221,7 @@ let g:lightline.subseparator = {
 	\   'left': '', 'right': ''
   \}
 
+" Goyo
+map <F11> :Goyo<CR>
+map <leader>f :Goyo \| set linebreak<CR>
+inoremap <F11> <esc>:Goyo<CR>a
