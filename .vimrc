@@ -114,6 +114,7 @@ let python_highlight_all=1
 
 " Show line numbers
 set number
+set relativenumber
 
 " Encoding
 set encoding=utf-8
