@@ -20,6 +20,7 @@ alias octal="stat -c '%a %n'"
 # Upgrade
 alias upgrade='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get clean'
 alias upgrade-fast='sudo apt-fast update && sudo apt-fast upgrade -y'
+alias upgrade-kernel='sudo zypper dist-upgrade -r kernel-repo'
 alias pip_upgrade='pip list --outdated | sed "s/(.*//g" | xargs pip install -U'
 
 # Flex
