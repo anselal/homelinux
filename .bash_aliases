@@ -17,6 +17,11 @@ alias octal="stat -c '%a %n'"
 # Usage octal * (for all files)
 #       octal hello.txt (for a specific file)
 
+# Folder shortcuts
+alias down='cd ~/Downloads'
+alias antmon='cd ~/Projects/github/anselal/antminer-monitor'
+alias homelinux='cd ~/Projects/github/anselal/homelinux'
+
 # Upgrade
 alias upgrade='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get clean'
 alias upgrade-fast='sudo apt-fast update && sudo apt-fast upgrade -y'
