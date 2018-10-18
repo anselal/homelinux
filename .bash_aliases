@@ -42,6 +42,10 @@ alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=sta
 alias openports='sudo netstat -tulp' # optionally pass -n
 alias openconnections='sudo netstat -tupn'
 
+# xrandr
+alias vga='xrandr --auto --output VGA-1 --mode 1920x1080 --right-of LVDS-1'
+alias dp='xrandr --auto --output DP-1 --mode 1920x1080 --right-of LVDS-1'
+
 function rpi_info() {
   echo ""
   echo "=======";
