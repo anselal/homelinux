@@ -42,4 +42,5 @@ nnoremap tl :tablast<CR>
 
 syntax on
 set t_Co=256
+set mouse=a             " Enable mouse support
 colorscheme wombat256mod
