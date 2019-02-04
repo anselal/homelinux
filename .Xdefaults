@@ -1,0 +1,43 @@
+XTerm*termName: xterm-256color
+XTerm*utf8:	2
+XTerm*locale:	true
+XTerm*metaSendsEscape: true
+XTerm*saveLines: 8192
+XTerm*borderWidth: 1
+XTerm*borderColor: green
+XTerm*scrollBar: false
+XTerm*dynamicColors: true
+XTerm*background: grey11
+XTerm*foreground: grey
+
+! Only select text
+XTerm*highlightSelection: true
+
+! Remove trailing spaces
+XTerm*trimSelection: true
+
+! VT Font Menu: Unreadable
+XTerm*faceSize1: 16
+! VT font menu: Tiny
+XTerm*faceSize2: 22
+! VT font menu: Medium
+XTerm*faceSize3: 28
+! VT font menu: Large
+XTerm*faceSize4: 32
+! VT font menu: Huge
+XTerm*faceSize5: 40
+
+XTerm*renderFont:	true
+XTerm*faceName:		Inconsolata Nerd Font Mono
+XTerm*faceSize:		12
+XTerm*preeditType:	Root
+XTerm*xftAntialias: true
+
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> minus: smaller-vt-font() \n\
+  Ctrl <Key> plus: larger-vt-font() \n\
+  Ctrl <Key> 0: set-vt-font(d) \n\
+  Shift <KeyPress> Insert: insert-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
+  Ctrl <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY)
