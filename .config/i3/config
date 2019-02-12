@@ -37,8 +37,10 @@ set $TERMINAL lilyterm -s
 floating_modifier $sup
 
 # Set wallpaper and terminal color scheme
-exec_always --no-startup-id wal -i ~/.config/wall.jpg
+#exec_always --no-startup-id wal -i ~/.config/wall.jpg
 #exec_always --no-startup-id /usr/bin/feh --bg-scale ~/.config/wallpapers/marc-kleen-544354-unsplash.jpg
+exec_always --no-startup-id /usr/bin/feh --bg-scale ~/.config/wall.jpg
+
 
 #
 set $bg-color 	         #2f343f
