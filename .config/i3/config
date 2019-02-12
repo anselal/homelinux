@@ -31,7 +31,7 @@ set $alt Mod1
 set $sup Mod4
 
 # Set terminal
-set $TERMINAL lilyterm -s
+set $TERMINAL xterm #lilyterm -s
 
 # Use Mouse+$sup to drag floating windows to their wanted position
 floating_modifier $sup
