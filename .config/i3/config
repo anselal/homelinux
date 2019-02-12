@@ -16,7 +16,7 @@
 # Set gaps
 gaps inner 10
 gaps outer 10
-smart_gaps on
+#smart_gaps on
 
 # Hide borders
 for_window [class=".*"] border pixel 0
