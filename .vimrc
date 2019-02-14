@@ -1,6 +1,8 @@
 " General
 set number              " Show line numbers
 set relativenumber      " Show relative line numbers
+set lazyredraw
+set regexpengine=1      " use old engine (makes relativenumber faster)
 set linebreak           " Break lines at word (requires Wrap lines)
 set showbreak=+++       " Wrap-broken line prefix
 set textwidth=100       " Line wrap (number of cols)
