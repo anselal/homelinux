@@ -80,10 +80,10 @@ bar {
 #---------#
 
 # change focus
-bindsym $sup+j               focus left
-bindsym $sup+k               focus down
-bindsym $sup+l               focus up
-bindsym $sup+semicolon       focus right
+bindsym $sup+h               focus left
+bindsym $sup+j               focus down
+bindsym $sup+k               focus up
+bindsym $sup+l               focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $sup+Left            focus left
