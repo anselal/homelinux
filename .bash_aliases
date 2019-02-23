@@ -27,6 +27,7 @@ alias upgrade='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get au
 alias upgrade-fast='sudo apt-fast update && sudo apt-fast upgrade -y'
 alias upgrade-kernel='sudo zypper dist-upgrade -r kernel-repo'
 alias pip_upgrade='pip list --outdated | sed "s/(.*//g" | xargs pip install -U'
+alias upgrade-pihole="sudo curl -sSL https://install.pi-hole.net | bash"
 
 # Flex
 alias flex='flexget execute --tasks SHOWRSS move_tvshows --now'
