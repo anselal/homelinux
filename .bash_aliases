@@ -2,7 +2,7 @@
 alias egrep='egrep --color'
 alias fgrep='fgrep --color'
 alias grep='grep --color'
-alias ls='ls --color'
+alias l='ls --color'
 alias la='ls -al --color'
 alias ll='ls -l --color'
 alias xl='tailf ~/.kodi/temp/kodi.log'
