@@ -45,6 +45,7 @@ nnoremap <C-K> <C-W><C-K> " Ctrl-k move to the split above
 nnoremap <C-L> <C-W><C-L> " Ctrl-l move to the split to the right
 nnoremap <C-H> <C-W><C-H> " Ctrl-m move to the split to the left
 
+" Tab shortcuts
 nnoremap <C-t> :tabnew<CR>
 nnoremap <C-w> :tabclose<CR>
 nnoremap tk :tabnext<CR>
