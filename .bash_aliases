@@ -33,13 +33,6 @@ alias upgrade-pihole="sudo curl -sSL https://install.pi-hole.net | bash"
 alias flex='flexget execute --tasks SHOWRSS move_tvshows --now'
 alias flexmove='flexget execute --tasks move_tvshows --now'
 
-# RPi
-alias rpi_getmem='vcgencmd get_mem arm && vcgencmd get_mem gpu'
-alias rpi_gettemp='vcgencmd measure_temp'
-alias rpi_getclock='for src in arm core h264 isp v3d uart pwm emmc pixel vec hdmi dpi ; do echo -e "$src:\t$(vcgencmd measure_clock $src)" ; done'
-alias rpi_getvolts='for id in core sdram_c sdram_i sdram_p ; do echo -e "$id:\t$(vcgencmd measure_volts $id)" ; done'
-alias rpi_getcodec='for codec in H264 MPG2 WVC1 MPG4 MJPG WMV9 ; do echo -e "$codec:\t$(vcgencmd codec_enabled $codec)" ; done'
-
 # Docker aliases
 alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
@@ -51,35 +44,6 @@ alias openconnections='sudo netstat -tupn'
 # xrandr
 alias vga='xrandr --auto --output VGA-1 --mode 1920x1080 --right-of LVDS-1'
 alias dp='xrandr --auto --output DP-1 --mode 1920x1080 --right-of LVDS-1'
-
-function rpi_info() {
-  echo ""
-  echo "=======";
-  echo "Memory";
-  echo "=======";
-  rpi_getmem
-  echo ""
-  echo "============";
-  echo "Temperature";
-  echo "============";
-  rpi_gettemp
-  echo ""
-  echo "======";
-  echo "Clock";
-  echo "======";
-  rpi_getclock
-  echo ""
-  echo "=======";
-  echo "Volts";
-  echo "=======";
-  rpi_getvolts
-  echo ""
-  echo "=======";
-  echo "Codecs";
-  echo "=======";
-  rpi_getcodec
-  echo ""
-}
 
 # Easy file sharing from the command line
 transfer() {

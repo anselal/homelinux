@@ -1,0 +1,35 @@
+# RPi
+alias rpi_getmem='vcgencmd get_mem arm && vcgencmd get_mem gpu'
+alias rpi_gettemp='vcgencmd measure_temp'
+alias rpi_getclock='for src in arm core h264 isp v3d uart pwm emmc pixel vec hdmi dpi ; do echo -e "$src:\t$(vcgencmd measure_clock $src)" ; done'
+alias rpi_getvolts='for id in core sdram_c sdram_i sdram_p ; do echo -e "$id:\t$(vcgencmd measure_volts $id)" ; done'
+alias rpi_getcodec='for codec in H264 MPG2 WVC1 MPG4 MJPG WMV9 ; do echo -e "$codec:\t$(vcgencmd codec_enabled $codec)" ; done'
+
+function rpi_info() {
+  echo ""
+  echo "=======";
+  echo "Memory";
+  echo "=======";
+  rpi_getmem
+  echo ""
+  echo "============";
+  echo "Temperature";
+  echo "============";
+  rpi_gettemp
+  echo ""
+  echo "======";
+  echo "Clock";
+  echo "======";
+  rpi_getclock
+  echo ""
+  echo "=======";
+  echo "Volts";
+  echo "=======";
+  rpi_getvolts
+  echo ""
+  echo "=======";
+  echo "Codecs";
+  echo "=======";
+  rpi_getcodec
+  echo ""
+}
