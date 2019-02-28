@@ -1,3 +1,5 @@
+HISTSIZE= HISTFILESIZE= # Infinite history
+
 export EDITOR=/usr/bin/vim
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
