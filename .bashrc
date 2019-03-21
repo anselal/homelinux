@@ -5,8 +5,9 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
 export TERM='xterm-256color'
 
-if [ -d ~/bin ]; then
-    export PATH=$PATH:~/bin
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
 fi
 
 test -s ~/.bash_aliases && source ~/.bash_aliases || true
