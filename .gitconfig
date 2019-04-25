@@ -9,3 +9,5 @@
         ui = true
 [log]
         decorate = true
+[core]
+	editor = vim
