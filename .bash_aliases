@@ -17,6 +17,16 @@ alias octal="stat -c '%a %n'"
 # Usage octal * (for all files)
 #       octal hello.txt (for a specific file)
 
+## a quick way to get out of current directory ##
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .2='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+
 # Folder shortcuts
 alias down='cd ~/Downloads'
 alias antmon='cd ~/Projects/github/anselal/antminer-monitor'
