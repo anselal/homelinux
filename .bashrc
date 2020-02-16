@@ -14,3 +14,5 @@ test -s ~/.bash_aliases && source ~/.bash_aliases || true
 test -s ~/.bash_aliases_rpi && source ~/.bash_aliases_rpi || true
 test -s ~/.bash_prompt && source ~/.bash_prompt || true
 
+# make caps lock behave as escape
+setxkbmap -option caps:escape
