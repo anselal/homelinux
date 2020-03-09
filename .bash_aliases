@@ -70,3 +70,29 @@ transfer() {
     cat $tmpfile;
     rm -f $tmpfile;
 }
+
+function slog() {
+    if [ "$#" -eq 0 ]; then
+        clear; tail /var/log/syslog
+    elif [ "$#" -eq 1 ]; then
+        clear; grep $1 /var/log/syslog | tail
+    fi
+}
+
+function recgrep() {
+    if [ "$#" -eq 0 ]; then
+        echo "argumenmts: location optional(), text to search"
+    elif [ "$#" -eq 1 ]; then
+        grep -rnw '.' -e "$1"
+    elif [ "$#" -eq 2 ]; then
+        grep -rnw $1 -e "$2"
+    fi
+}
+
+function recreplace() {
+    if [ "$#" -eq 0 ]; then
+        echo -e "arguments: location, extension eg. *.inc, text to find, text to replace"
+    elif [ "$#" -eq 4 ]; then
+        find $1 -type f -name "$2" -print0 | xargs -0 sed -i '' -e 's/$3/$4/g'
+    fi
+}
