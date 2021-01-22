@@ -1,0 +1,1 @@
+vboxmanage list vms | awk --field-separator '\"' '{ print $2 }' | dmenu -l 5 -p 'vboxheadless -s ' | xargs -I {} vboxheadless -s {}

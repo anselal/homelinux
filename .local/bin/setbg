@@ -1,0 +1,1 @@
+cd ~/Pictures/Wallpaper; find . -type f | dmenu -l 5 -p 'Wallpaper ' | xargs -I {} feh --bg-scale {}

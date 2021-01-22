@@ -1,0 +1,1 @@
+vboxmanage list runningvms | awk --field-separator '\"' '{ print $2 }' | dmenu -l 5 -p 'vboxmanage poweroff  ' | xargs -I {} vboxmanage controlvm {} poweroff

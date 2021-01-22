@@ -1,0 +1,1 @@
+awk '/^Host/ {print $2}' $HOME/.ssh/config | dmenu -l 10 -p 'ssh ' | xargs -I {} st -e ssh {}
