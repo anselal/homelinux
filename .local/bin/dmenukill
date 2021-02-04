@@ -1,1 +1,1 @@
-ps ux --no-headers --sort=-%cpu | dmenu -l 20 -p \"`ps -ux | head -1` | kill  \" | awk '{print $2}' | xargs kill
+ps ux --no-headers --sort=-%cpu | dmenu -l 20 -p "kill process: " | awk '{print $2}' | xargs kill
