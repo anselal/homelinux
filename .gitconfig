@@ -11,3 +11,4 @@
         decorate = true
 [core]
 	editor = vim
+        whitespace = cr-at-eol
