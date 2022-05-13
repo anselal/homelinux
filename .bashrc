@@ -1,3 +1,7 @@
+##############################
+# CUSTOM CODE BY soulis.tech #
+##############################
+
 HISTSIZE= HISTFILESIZE= # Infinite history
 
 export EDITOR=/usr/bin/vim
@@ -10,9 +14,13 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 test -s ~/.bash_aliases && source ~/.bash_aliases || true
 test -s ~/.bash_aliases_rpi && source ~/.bash_aliases_rpi || true
 test -s ~/.bash_prompt && source ~/.bash_prompt || true
 
 # make caps lock behave as escape
-command -v setxkbmap >/dev/null 2>&1 && setxkbmap -option caps:escape
+# command -v setxkbmap >/dev/null 2>&1 && setxkbmap -option caps:escape
