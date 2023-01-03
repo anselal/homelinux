@@ -1,0 +1,17 @@
+# reverse proxy template
+server {
+    server_name soulis.tech;
+
+    location / {
+        proxy_pass http://192.168.1.7:9091;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # for certbot challenge
+    location /.well-known {
+        alias /var/www/html/.well-known;
+    }
+}
