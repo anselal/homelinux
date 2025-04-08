@@ -59,6 +59,9 @@ alias dp='xrandr --auto --output DP-1 --mode 1920x1080 --right-of LVDS-1'
 alias c="clear && git status"
 alias d="git diff $1"
 
+# Hugo
+alias hs="hugo server --noHTTPCache --disableFastRender"
+
 # Easy file sharing from the command line
 transfer() {
     if [ $# -eq 0 ]; then
