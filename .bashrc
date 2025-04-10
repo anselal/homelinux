@@ -9,6 +9,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
 export TERM='xterm-256color'
 
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
@@ -17,6 +18,8 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 test -s ~/.bash_aliases && source ~/.bash_aliases || true
 test -s ~/.bash_aliases_rpi && source ~/.bash_aliases_rpi || true
