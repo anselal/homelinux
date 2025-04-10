@@ -57,3 +57,25 @@ set t_Co=256
 source /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf
 set-option -g default-terminal "screen-256color"
 ```
+
+- **Tmux Plugin Manager**:
+
+To take advantage of the current tmux configuration file please first install Tmux Plugin Manager (TPM):
+
+```sh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+Key Bindings:
+
+`prefix` + `I`
+
+- Install new plugins
+
+`prefix` + `U`
+
+- Update plugin(s)
+
+`prefix` + `alt` + `u`
+
+- Remove/uninstall plugins not on the plugin list
