@@ -10,13 +10,15 @@ return {
   lazy = false, -- neo-tree will lazily load itself
   ---@module "neo-tree"
   ---@type neotree.Config?
-  opts = {
-    -- fill any relevant options here
-    filesystem = {
-      filtered_items = {
-        visible = true,
+  config = function()
+    require("neo-tree").setup({
+      filesystem = {
+        filtered_items = {
+          visible = true,
+        },
       },
-    },
-  },
+    })
+    vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left<CR>')
+  end
 }
 

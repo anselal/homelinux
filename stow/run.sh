@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Detect package manager
 if command -v apt >/dev/null 2>&1; then
