@@ -27,6 +27,7 @@ local opts = {
 }
 
 require("vim-options")
+require("keymaps")
 -- Setup lazy.nvim
 require("lazy").setup("plugins", opts)
 
