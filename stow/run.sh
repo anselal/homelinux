@@ -32,6 +32,8 @@ if command -v nvim >/dev/null 2>&1; then
     if [ "$(printf '%s\n' "0.9.0" "$current_version" | sort -V | head -n1)" != "0.9.0" ]; then
         echo "[INFO] Neovim version $current_version is older than 0.9.0"
         install_nvim=true
+        echo "[INFO] Removing old nvim version..."
+        sudo $pkg_add remove -y neovim >/dev/null 2>&1
     else
         echo "[INFO] Neovim version $current_version is sufficient."
     fi
@@ -41,8 +43,6 @@ else
 fi
 
 if [ "$install_nvim" = true ]; then
-    echo "[INFO] Removing old nvim version..."
-    sudo $pkg_add remove -y neovim >/dev/null 2>&1
     echo "[INFO] Installing Neovim >= 0.9.0..."
     # Make sure /opt exists
     if [ ! -d /opt ]; then
