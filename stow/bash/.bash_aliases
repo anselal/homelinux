@@ -39,7 +39,7 @@ elif command -v dnf >/dev/null 2>&1; then
     pkg_add="dnf"
 fi
 
-upgrade() {
+function upgrade() {
     if [ "$pkg_add" = "dnf" ]; then
         sudo "$pkg_add" -y update && \
         sudo "$pkg_add" -y upgrade && \
