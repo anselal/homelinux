@@ -32,8 +32,27 @@ alias down='cd ~/Downloads'
 alias antmon='cd ~/Projects/github/anselal/antminer-monitor'
 alias homelinux='cd ~/Projects/github/anselal/homelinux'
 
-# Upgrade
-alias upgrade='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get clean'
+# Detect package manager
+if command -v apt >/dev/null 2>&1; then
+    pkg_add="apt"
+elif command -v dnf >/dev/null 2>&1; then
+    pkg_add="dnf"
+fi
+
+upgrade() {
+    if [ "$pkg_add" = "dnf" ]; then
+        sudo "$pkg_add" -y update && \
+        sudo "$pkg_add" -y upgrade && \
+        sudo "$pkg_add" -y autoremove && \
+        sudo "$pkg_add" clean all
+    else
+        sudo "$pkg_add" update && \
+        sudo "$pkg_add" upgrade -y && \
+        sudo "$pkg_add" autoremove && \
+        sudo "$pkg_add" clean
+    fi
+}
+
 alias upgrade-fast='sudo apt-fast update && sudo apt-fast upgrade -y'
 alias upgrade-kernel='sudo zypper dist-upgrade -r kernel-repo'
 alias pip_upgrade='pip list --outdated | sed "s/(.*//g" | xargs pip install -U'
@@ -106,3 +125,4 @@ function recreplace() {
         find $1 -type f -name "$2" -print0 | xargs -0 sed -i '' -e 's/$3/$4/g'
     fi
 }
+
