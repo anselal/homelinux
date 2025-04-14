@@ -32,25 +32,26 @@ alias down='cd ~/Downloads'
 alias antmon='cd ~/Projects/github/anselal/antminer-monitor'
 alias homelinux='cd ~/Projects/github/anselal/homelinux'
 
-# Detect package manager
-if command -v apt >/dev/null 2>&1; then
-    pkg_add="apt"
-elif command -v dnf >/dev/null 2>&1; then
-    pkg_add="dnf"
-fi
 
 function upgrade() {
-    if [ "$pkg_add" = "dnf" ]; then
-        sudo "$pkg_add" -y update && \
-        sudo "$pkg_add" -y upgrade && \
-        sudo "$pkg_add" -y autoremove && \
-        sudo "$pkg_add" clean all
-    else
-        sudo "$pkg_add" update && \
-        sudo "$pkg_add" upgrade -y && \
-        sudo "$pkg_add" autoremove && \
-        sudo "$pkg_add" clean
-    fi
+  # Detect package manager
+  if command -v apt >/dev/null 2>&1; then
+    pkg_add="apt"
+  elif command -v dnf >/dev/null 2>&1; then
+    pkg_add="dnf"
+  fi
+  
+  if [ "$pkg_add" = "dnf" ]; then
+    sudo "$pkg_add" -y update && \
+    sudo "$pkg_add" -y upgrade && \
+    sudo "$pkg_add" -y autoremove && \
+    sudo "$pkg_add" clean all
+  else
+    sudo "$pkg_add" update && \
+    sudo "$pkg_add" upgrade -y && \
+    sudo "$pkg_add" autoremove && \
+    sudo "$pkg_add" clean
+  fi
 }
 
 alias upgrade-fast='sudo apt-fast update && sudo apt-fast upgrade -y'
