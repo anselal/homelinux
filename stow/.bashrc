@@ -19,8 +19,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-
 test -s ~/.bash_aliases && source ~/.bash_aliases || true
 test -s ~/.bash_aliases_rpi && source ~/.bash_aliases_rpi || true
 test -s ~/.bash_prompt && source ~/.bash_prompt || true

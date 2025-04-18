@@ -55,6 +55,8 @@ if [ "$install_nvim" = true ]; then
     sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
     rm nvim-linux-x86_64.tar.gz
     echo "[INFO] Neovim installed to /opt/nvim"
+    sudo ln -s /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
+    echo "[INFO] Linked nvim to /usr/local/bin/nvim"
 fi
 
 echo "[INFO] Linking dotfiles with stow..."
