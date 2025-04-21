@@ -12,3 +12,12 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 -- Move selected lines up
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Fix Home and End inside tmux/nvim
+-- Map <Find> to Home
+vim.keymap.set("n", "<Find>", "<Home>")
+vim.keymap.set("i", "<Find>", "<Home>")
+
+-- Map <Select> to End
+vim.keymap.set("n", "<Select>", "<End>")
+vim.keymap.set("i", "<Select>", "<End>")
+

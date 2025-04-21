@@ -14,9 +14,9 @@ return {
     require("neo-tree").setup({
       filesystem = {
         filtered_items = {
-          visible = true,
-        },
-      },
+          visible = true
+        }
+      }
     })
     vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left<CR>')
   end

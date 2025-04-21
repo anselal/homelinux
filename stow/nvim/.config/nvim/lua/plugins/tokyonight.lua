@@ -8,8 +8,8 @@ return {
       transparent = true,
       styles = {
         sidebars = "transparent",
-        floats = "transparent",
-      },
+        floats = "transparent"
+      }
     })
     vim.cmd.colorscheme "tokyonight-moon" --night,storm,day,moon
   end

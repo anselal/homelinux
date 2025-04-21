@@ -1,3 +1,4 @@
+-- nvim-cmp gives you the autocomplete UI — the dropdown menu of suggestions
 return {
   "hrsh7th/nvim-cmp",
   dependencies = {
@@ -11,15 +12,18 @@ return {
       snippet = {
         expand = function(args)
           require("luasnip").lsp_expand(args.body)
-        end,
+        end
       },
       sources = {
         { name = "nvim_lsp" },
         { name = "luasnip" },
       },
       mapping = cmp.mapping.preset.insert({
-        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
-      }),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<Tab>'] = cmp.mapping.select_next_item(),
+        ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+      })
     })
-  end,
+  end
 }
+
