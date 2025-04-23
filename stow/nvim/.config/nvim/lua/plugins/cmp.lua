@@ -24,6 +24,6 @@ return {
         ['<S-Tab>'] = cmp.mapping.select_prev_item(),
       })
     })
-  end
+  end,
 }
 

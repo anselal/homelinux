@@ -23,13 +23,13 @@ local lazy = require("lazy")
 -- Setup lazy.nvim
 lazy.setup({
 	spec = {
-		{ import = "plugins" }
+		{ import = "plugins" },
 	},
 	change_detection = {
 		enabled = true,
-		notify = true
+		notify = true,
 	},
   -- automatically check for plugin updates
-	checker = { enabled = true }
+	checker = { enabled = true },
 })
 

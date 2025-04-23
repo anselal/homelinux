@@ -12,5 +12,5 @@ return {
       }
     })
     require("lspconfig").pyright.setup({})
-  end
+  end,
 }
