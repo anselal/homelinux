@@ -15,8 +15,8 @@ return {
       filesystem = {
         filtered_items = {
           visible = true,
-        }
-      }
+        },
+      },
     })
     vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left<CR>')
   end,
