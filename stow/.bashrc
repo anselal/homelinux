@@ -2,6 +2,8 @@
 # CUSTOM CODE BY soulis.tech #
 ##############################
 
+umask 077
+
 HISTSIZE= HISTFILESIZE= # Infinite history
 
 export EDITOR=/usr/bin/vim

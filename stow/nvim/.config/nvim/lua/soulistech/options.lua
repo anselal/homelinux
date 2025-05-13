@@ -25,6 +25,6 @@ vim.opt.termguicolors = true
 vim.opt.breakindent = true
 
 -- Place a column line
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
 
 
