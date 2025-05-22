@@ -10,29 +10,37 @@ else
     exit 1
 fi
 
-# List of required commands
-apps=(stow nano git tmux)
+# Define required apps as command:package pairs
+declare -A app_map=(
+    [stow]=stow
+    [nano]=nano
+    [git]=git
+    [tmux]=tmux
+    [rg]=ripgrep
+)
 
 # Check and install missing commands
-for app in "${apps[@]}"; do
-    if ! command -v "$app" >/dev/null 2>&1; then
-        echo "[INFO] $app not found. Installing..."
-        sudo $pkg_add install -y "$app" >/dev/null 2>&1
+for cmd in "${!app_map[@]}"; do
+    pkg="${app_map[$cmd]}"
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        echo "[INFO] Command '$cmd' not found. Installing package '$pkg'..."
+        sudo $pkg_add install -y "$pkg" >/dev/null 2>&1
     else
-        echo "[INFO] $app is already installed."
+        echo "[INFO] Command '$cmd' is already installed."
     fi
 done
 
 # Function to install latest Neovim from GitHub
 install_latest_nvim() {
-    echo "[INFO] Installing Neovim >= 0.9.0..."
     if [ ! -d /opt ]; then
         echo "[INFO] /opt does not exist. Creating it..."
         sudo mkdir -p /opt
     fi
 
+    echo "[INFO] Fetching latest Neovim version"
     curl -LOs https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
     sudo rm -rf /opt/nvim-linux-x86_64
+    echo "[INFO] Installing Neovim >= 0.9.0..."
     sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
     rm nvim-linux-x86_64.tar.gz
     echo "[INFO] Neovim installed to /opt/nvim-linux-x86_64"

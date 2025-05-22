@@ -20,3 +20,6 @@ vim.keymap.set("i", "<Find>", "<Home>")
 vim.keymap.set("n", "<Select>", "<End>")
 vim.keymap.set("i", "<Select>", "<End>")
 
+vim.keymap.set("i", "jj", "<Esc>", { noremap = true })
+vim.keymap.set("i", "kk", "<Esc>", { noremap = true })
+
