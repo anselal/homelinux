@@ -8,6 +8,8 @@ alias ll='ls -l --color'
 alias xl='tailf ~/.kodi/temp/kodi.log'
 alias xll='less ~/.kodi/temp/kodi.log'
 alias xlll='while :; do tailf ~/.kodi/temp/kodi.log; done'
+alias t='tree'
+alias ta='tree -a'
 
 # Custom aliases
 alias kairos='curl http://wttr.in/thessaloniki'
@@ -30,7 +32,7 @@ alias .5='cd ../../../../../'
 # Folder shortcuts
 alias down='cd ~/Downloads'
 alias antmon='cd ~/Projects/github/anselal/antminer-monitor'
-alias homelinux='cd ~/Projects/github/anselal/homelinux'
+alias h='cd ~/Projects/github/anselal/homelinux/stow'
 
 
 function upgrade() {
