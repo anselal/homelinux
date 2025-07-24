@@ -1,6 +1,6 @@
 require("soulistech.options")
-require("soulistech.lazy")
 require("soulistech.keymaps")
+require("soulistech.lazy")
 
 -- Auto-source soulistech modules on save
 vim.api.nvim_create_autocmd("BufWritePost", {
